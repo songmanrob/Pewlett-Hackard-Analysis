@@ -1,4 +1,5 @@
--- Create table request #1
+-- Deliverable #1
+-- Create table of retiring employees by title
 select tt.title,
 	tt.from_date,
 	ce.emp_no,
@@ -35,7 +36,7 @@ FROM
     ) tmp WHERE rn = 1
 ORDER BY emp_no;
 
--- Create table request #1 with no dups
+-- Re-create table of retiring employees by title with no dups
 select tt.title,
 	tt.from_date,
 	ce.emp_no,
@@ -54,6 +55,14 @@ order by tt.title,
     ce.last_name,
 	ce.first_name,
 	s.salary;
+
+--Create table that shows number of retiring employees per title
+select title,
+	count (title)
+into retiring_titles
+from retirement_by_title_no_dups
+group by (title);
+
 
 -- Deliverable #2
 -- Create table of mentorship eligibility
