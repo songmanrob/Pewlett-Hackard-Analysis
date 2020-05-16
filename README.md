@@ -10,7 +10,7 @@ Among other csv files, we were given on that listed all employees (including pas
 One of the challenges was to filter the employee data to include only current employees and filter the title data to include only the current title held by each employee.
 
 To start, we needed to create an ERD for the data we were given as shown here.
-![ERD Image](https://github.com/songmanrob/Pewlett-Hackard-Analysis/blob/master/EmployeeDB.png | width=450)
+![ERD Image](https://github.com/songmanrob/Pewlett-Hackard-Analysis/blob/master/EmployeeDB.png | width="450")
 
 To figure out the employees who were retiring, we listed those who were current employees born between 1952 and 1955 (retirement_info.csv).
 
