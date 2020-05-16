@@ -63,6 +63,14 @@ into retiring_titles
 from retirement_by_title_no_dups
 group by (title);
 
+--Create table that shows number of current employees per title
+select title,
+	count (title)
+into current_emp_titles
+from titles as tt
+right join current_emp as ce
+on (tt.emp_no = ce.emp_no)
+group by (title);
 
 -- Deliverable #2
 -- Create table of mentorship eligibility
